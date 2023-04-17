@@ -1,0 +1,17 @@
+version: '3'
+
+services: 
+  mongoqna:
+    image: mongo
+
+  qna:
+    build: ./qna
+    ports:
+      - "8001:8001"
+
+  auth:
+    build: ./auth
+    ports:
+      - "8002:8002"
+    
+
